@@ -4218,7 +4218,7 @@ class AvaTaxClient extends AvaTaxClientBase
      * @param string $countryCode If not null, return all records with this code.
      * @return FetchResult
      */
-    public function listProductClassificationSystemsByCompany($companyCode, $filter=null, $top=null, $skip=null, $orderBy=null, $countryCode)    {
+    public function listProductClassificationSystemsByCompany($companyCode, $filter=null, $top=null, $skip=null, $orderBy=null, $countryCode=null)    {
         $path = "/api/v2/definitions/productclassificationsystems/bycompany/{$companyCode}";
         $guzzleParams = [
             'query' => ['$filter' => $filter, '$top' => $top, '$skip' => $skip, '$orderBy' => $orderBy, '$countryCode' => $countryCode],
